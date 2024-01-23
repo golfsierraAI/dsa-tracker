@@ -1,0 +1,45 @@
+@import "../../utils/mixins.scss";
+@import "../../utils/constants.scss";
+
+.root {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include sm {
+    flex-direction: column;
+  }
+}
+.logoWrapper {
+  width: 60px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  &:hover {
+    transform: scale(1.2);
+  }
+  @include sm {
+    display: none;
+  }
+}
+.welcomeText {
+  font-weight: 500;
+  color: $text-color;
+  @include sm {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+}
+
+.tagsWrapper {
+  @include tilesWrapper;
+}
+.category {
+  @include tile;
+}

@@ -1,0 +1,48 @@
+@import "./constants.scss";
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin tilesWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-columns: 1fr;
+  gap: 15px;
+  @include md {
+    grid-template-columns: 100%;
+  }
+}
+
+@mixin tile {
+  background-color: $light-background-color;
+  cursor: pointer;
+  border-radius: 5px;
+  color: $text-color;
+  padding: 20px 30px;
+  border: 1px solid #303e52;
+  & > h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  & > h2 {
+    font-weight: 300;
+    font-size: 1.7rem;
+  }
+}

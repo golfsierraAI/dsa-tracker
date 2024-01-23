@@ -32,10 +32,11 @@
   gap: 10px;
   flex: 1;
   & > h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
   }
   h6 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
   }
   a {
@@ -67,7 +68,7 @@
   }
 
   &:hover {
-    scale: 1.02;
+    scale: 1;
     border-color: $blue-color;
   }
 }
@@ -88,13 +89,14 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 10;
 }
 
 .tag {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   background-color: $green-color;
   color: #000;
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 20px;
 }
